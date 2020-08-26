@@ -23,22 +23,23 @@ Route::get('/', function () {
 ////    $user->address()->save($address);
 ////});
 
-Route::get('/update', function(){
+//Route::get('/update', function(){
+//
+//    $address = Address::whereUserId(1)->first();
+////    $address = Address::where('user_id', 1) ;  # equal to query bellow
+//
+//    $address->name = "43434 Updated Av, Moscow";
+//    $address->save();
+//});
+//
+//Route::get('/read', function(){
+//    $user = User::findOrFail(1);
+//    echo $user->address->name;
+//});
+//
+//Route::get('/delete', function(){
+//    $user = User::findOrFail(1);
+//    $user->address()->delete();
+//    return "done";
+//});
 
-    $address = Address::whereUserId(1)->first();
-//    $address = Address::where('user_id', 1) ;  # equal to query bellow
-
-    $address->name = "43434 Updated Av, Moscow";
-    $address->save();
-});
-
-Route::get('/read', function(){
-    $user = User::findOrFail(1);
-    echo $user->address->name;
-});
-
-Route::get('/delete', function(){
-    $user = User::findOrFail(1);
-    $user->address()->delete();
-    return "done";
-});

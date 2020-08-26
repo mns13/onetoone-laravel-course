@@ -27,4 +27,8 @@ class User extends Authenticatable
     public function address(){
         return $this->hasOne('App\Address');
     }
+
+    public function posts(){
+        return $this->hasMany('App\Post');
+    }
 }
