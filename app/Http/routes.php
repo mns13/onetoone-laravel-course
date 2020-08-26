@@ -13,6 +13,7 @@
 use App\User;
 use App\Address;
 use App\Post;
+use App\Role;
 
 Route::get('/', function () {
     return view('welcome');
@@ -69,5 +70,27 @@ Route::get('/', function () {
 ////    $user->posts()->whereId(1)->delete();
 ////});
 //
+
+//Route::get('/create', function(){
+//    $user = User::findOrFail(2);
+//    $user->roles()->save(new Role(['name'=>'subcriber']));
+//});
+//
+//Route::get('/update', function(){
+//    $user = User::findOrFail(1);
+//    if($user->has('roles')){
+//        foreach($user->roles as $role){
+//            if($role->name == "admin"){
+//                $role->name = "manager";
+//                $role->save();
+//            }
+//        }
+//    }
+//});
+//
+//Route::delete('/delete', function (){
+//    $user = User::findOrFail(1);
+//    $user->roles()->delete();
+//});
 
 
