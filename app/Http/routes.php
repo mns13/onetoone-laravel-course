@@ -44,27 +44,30 @@ Route::get('/', function () {
 //    return "done";
 //});
 
-Route::get('/create', function(){
-    $user = User::findOrFail(3);
-    $posts = new Post(['title'=>'JavaScript', 'body'=>'JS seems nice to me now']);
-    $user->posts()->save($posts);
-});
+//Route::get('/create', function(){
+////    $user = User::findOrFail(3);
+////    $posts = new Post(['title'=>'JavaScript', 'body'=>'JS seems nice to me now']);
+////    $user->posts()->save($posts);
+////});
+////
+////Route::get('/read', function(){
+////    $user = User::findOrFail(1);
+////    foreach($user->posts as $post){
+////        echo $post->title . "<br>";
+////    }
+//////     dd($user);
+////});
+////
+////Route::get('/update', function(){
+////    $user = User::findOrFail(1);
+////    $user->posts()->whereId(1)->update(['title'=>'Updated Title', 'body'=>'Updated Body']);
+////    return 'success';
+////});
+////
+////Route::get('/delete', function(){
+////    $user = User::find(1);
+////    $user->posts()->whereId(1)->delete();
+////});
+//
 
-Route::get('/read', function(){
-    $user = User::findOrFail(1);
-    foreach($user->posts as $post){
-        echo $post->title . "<br>";
-    }
-//     dd($user);
-});
 
-Route::get('/update', function(){
-    $user = User::findOrFail(1);
-    $user->posts()->whereId(1)->update(['title'=>'Updated Title', 'body'=>'Updated Body']);
-    return 'success';
-});
-
-Route::get('/delete', function(){
-    $user = User::find(1);
-    $user->posts()->whereId(1)->delete();
-});
