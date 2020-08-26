@@ -10,7 +10,15 @@
 | and give it the controller to call when that URI is requested.
 |
 */
+use App\User;
+use App\Address;
 
 Route::get('/', function () {
     return view('welcome');
 });
+
+//Route::get('/insert', function (){
+//    $user = User::findOrFail(2);
+//    $address = new Address(['name'=>'21312321 Baker Street UK']);
+//    $user->address()->save($address);
+//});
